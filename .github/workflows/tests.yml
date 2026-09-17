@@ -26,11 +26,11 @@ jobs:
         if: ${{ runner.os == 'macOS' }}
         with:
           xcode-version: ^26.0
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Generate action code
         if: ${{ github.event_name == 'pull_request' }}
         uses: ./.github/actions/generate-action-code
-      - uses: sersoft-gmbh/xcodebuild-action@v4
+      - uses: sersoft-gmbh/xcodebuild-action@3a8a748098f979d21942e2b0d036517780ae6847 # v4.0.0
         if: ${{ runner.os == 'macOS' }}
         with:
           spm-package: __test__/TestProject
@@ -71,11 +71,11 @@ jobs:
         if: ${{ runner.os == 'macOS' }}
         with:
           xcode-version: ^26.0
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Generate action code
         if: ${{ github.event_name == 'pull_request' }}
         uses: ./.github/actions/generate-action-code
-      - uses: sersoft-gmbh/xcodebuild-action@v4
+      - uses: sersoft-gmbh/xcodebuild-action@3a8a748098f979d21942e2b0d036517780ae6847 # v4.0.0
         if: ${{ runner.os == 'macOS' }}
         with:
           spm-package: __test__/TestProject
